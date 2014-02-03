@@ -6,7 +6,6 @@
   "homepage": "http://github.com/Wenqer/gulp-base64",
   "repository": "git://github.com/Wenqer/gulp-base64.git",
   "keywords": [
-    "gulpfriendly",
     "gulpplugin",
     "data-uri",
     "base64"
