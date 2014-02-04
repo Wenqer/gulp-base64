@@ -33,7 +33,8 @@ gulp.task('build', function () {
 
 - `baseDir`
 
-        If you have absolute image paths in your stylesheet, the path specified in this option will be used as the base directory (relative to gulpfile).
+        If you have absolute image paths in your stylesheet, the path specified
+        in this option will be used as the base directory (relative to gulpfile).
 
 - `extensions`
 
