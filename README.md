@@ -10,8 +10,8 @@ var base64 = require('./build/gulp-base64');
 
 gulp.task('build', function () {
     return gulp.src('./css/*.css')
-        .pipe(concat('main.css'))
         .pipe(base64())
+        .pipe(concat('main.css'))
         .pipe(gulp.dest('./public/css'));
 });
 
