@@ -1,7 +1,7 @@
 {
   "name": "gulp-base64",
-  "version": "0.0.3",
-  "description": "gulp task to encode images to data-uti",
+  "version": "0.1.0",
+  "description": "gulp task to encode images to data URI",
   "main": "index.js",
   "homepage": "http://github.com/Wenqer/gulp-base64",
   "repository": "git://github.com/Wenqer/gulp-base64.git",
