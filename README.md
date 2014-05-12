@@ -43,3 +43,7 @@ gulp.task('build', function () {
 - `debug`
 
         enable log to console.
+
+- `maxImageSize`
+
+        Maximum filesize in bytes for changing image to base64
