@@ -37,16 +37,16 @@ gulp.task('build', function () {
     If you have absolute image paths in your stylesheet, the path specified
     in this option will be used as the base directory (relative to gulpfile).
 
-  - `extensions`  (Array of `String` or `RegEXp`s)  
+  - `extensions`  (Array of `String` or `RegExp`s)  
     Proccess only specified extensions.  
     Strings are matched against file-extension only, while RegExps are tested against the raw URL value.
 
-  - `exclude`  (Array of `String` or `RegEXp`s)  
+  - `exclude`  (Array of `String` or `RegExp`s)  
     Skip files with URLs that match these patterns.  
     Unlike with the `extensions` option Strings are sub-string matched against the whole URL value.
 
   - `maxImageSize` (Number)  
-    Maximum filesize in bytes for changing image to base64
+    Maximum filesize in bytes for changing image to base64.
 
   - `debug` (Boolean)  
     Enable log to console.
