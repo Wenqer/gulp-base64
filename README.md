@@ -1,7 +1,7 @@
 gulp-base64
 ===========
 
-Gulp task for converting all data found within a stylesheet (those within a url( ... ) declaration) into base64-encoded data URI strings.
+Gulp task for converting all files found within a stylesheet (those within a url( ... ) declaration) into base64-encoded data URI strings.
 
 ## Example usage
 ```js
@@ -21,7 +21,9 @@ gulp.task('build', function () {
     return gulp.src('./css/*.css')
         .pipe(base64({
             baseDir: 'public',
-            extensions: ['svg', 'png'],
+            extensions: ['svg', 'png', /\.jpg#datauri$/i],
+            exclude:    [/\.server\.(com|net)\/dynamic\//, '--live.jpg'],
+            maxImageSize: 8*1024, // bytes
             debug: true
         }))
         .pipe(concat('main.css'))
@@ -31,19 +33,20 @@ gulp.task('build', function () {
 ```
 ## Options
 
-- `baseDir`
+  - `baseDir`  (String)  
+    If you have absolute image paths in your stylesheet, the path specified
+    in this option will be used as the base directory (relative to gulpfile).
 
-        If you have absolute image paths in your stylesheet, the path specified
-        in this option will be used as the base directory (relative to gulpfile).
+  - `extensions`  (Array of `String` or `RegEXp`s)  
+    Proccess only specified extensions.  
+    Strings are matched against file-extension only, while RegExps are tested against the raw URL value.
 
-- `extensions`
+  - `exclude`  (Array of `String` or `RegEXp`s)  
+    Skip files with URLs that match these patterns.  
+    Unlike with the `extensions` option Strings are sub-string matched against the whole URL value.
 
-        proccess only specified extensions.
+  - `maxImageSize` (Number)  
+    Maximum filesize in bytes for changing image to base64
 
-- `debug`
-
-        enable log to console.
-
-- `maxImageSize`
-
-        Maximum filesize in bytes for changing image to base64
+  - `debug` (Boolean)  
+    Enable log to console.
