@@ -40,6 +40,7 @@ gulp.task('build', function () {
 
   - `deleteAfterEncoding`  (Boolean)  
     Set this to true to delete images after they've been encoded. 
+    You'll want to do this in a staging area, and not in your source directories. Be careful.
 
   - `extensions`  (Array of `String` or `RegExp`s)  
     Proccess only specified extensions.  
