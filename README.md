@@ -23,7 +23,8 @@ gulp.task('build', function () {
             baseDir: 'public',
             extensions: ['svg', 'png', /\.jpg#datauri$/i],
             exclude:    [/\.server\.(com|net)\/dynamic\//, '--live.jpg'],
-            maxImageSize: 8*1024, // bytes
+            maxImageSize: 8*1024, // bytes,
+            deleteAfterEncoding: false,
             debug: true
         }))
         .pipe(concat('main.css'))
@@ -36,6 +37,10 @@ gulp.task('build', function () {
   - `baseDir`  (String)  
     If you have absolute image paths in your stylesheet, the path specified
     in this option will be used as the base directory (relative to gulpfile).
+
+  - `deleteAfterEncoding`  (Boolean)  
+    Set this to true to delete images after they've been encoded. 
+    You'll want to do this in a staging area, and not in your source directories. Be careful.
 
   - `extensions`  (Array of `String` or `RegExp`s)  
     Proccess only specified extensions.  
