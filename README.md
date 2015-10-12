@@ -3,6 +3,14 @@ gulp-base64
 
 Gulp task for converting all files found within a stylesheet (those within a url( ... ) declaration) into base64-encoded data URI strings.
 
+## Install
+
+Install with [npm](https://npmjs.org/package/gulp-sprite)
+
+```
+npm install gulp-base64 --save-dev
+```
+
 ## Example usage
 ```js
 var gulp = require('gulp');
