@@ -5,7 +5,7 @@ Gulp task for converting all files found within a stylesheet (those within a url
 
 ## Install
 
-Install with [npm](https://npmjs.org/package/gulp-sprite)
+Install with [npm](https://npmjs.org)
 
 ```
 npm install gulp-base64 --save-dev
