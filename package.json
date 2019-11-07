@@ -17,7 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "through2": "~0.4.1",
-    "extend": "~1.2.1",
+    "extend": "~3.0.2",
     "async": "~0.2.10",
     "mime": "~1.2.11",
     "request": "~2.33.0",
